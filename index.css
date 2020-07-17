@@ -1,0 +1,132 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    background: #E4EDF2;
+    width: 100%;
+    height: 100%;
+    /* overflow-y: auto; */
+}
+
+.navbar{
+    height: 150px;
+    width: 100%;
+    background: #24116A;
+    border-radius: 0px 0px 30px 30px;
+}
+
+/* Logo, Toggle button and icon-bar image */
+.brand{
+    left: 30%;
+    position: relative;
+}
+.logo img{
+    margin-left: 150px;
+    margin-top: -50px;
+}
+.navbar-toggle{
+    border: none;
+    margin-left: 210px;
+
+}
+
+
+.img-menu{
+    background-color:#24116A;
+    margin-top: -10px;
+}
+
+
+
+.navbar-collapse{
+    background-color: #24116A;
+    border-radius: 0px 0px 30px 30px;
+    padding: 20px 20px 20px 20px;
+    width: 300px;
+    height: 300px;
+    margin-left: 80px;
+    
+}
+
+
+/* Navigation links */
+.nav-links a{
+    color: white;
+}
+.nav-links a:hover{
+    list-style: none;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+.active{
+    color: white;
+    font-weight: bold;
+}
+.nav-links{
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* SVG image */
+.content img{
+    margin-top: 0%;
+    margin-left: -5%;
+    animation-duration: 3s;
+    animation-name: slidein;
+    
+}
+
+/* ANIMATIONS */
+
+  @keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 100%; 
+    }
+  
+    75% {
+      margin-left: 25%;
+      width: 50%;
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 50%;
+    }
+  }
+
+
+/* MOBILE RESPONSIVENESS */
+
+/* Large devices (landscape tablets, 1024px and up) */
+@media only screen and (max-width: 1024px) {
+    .brand{
+        left: 25%;
+    }
+}
+
+/* Small devices (landscape tablets, 768px and below) */
+@media only screen and (max-width: 768px) {
+    .brand{
+        left: 5%;
+    }
+    .content img{
+       width: 100%;
+       margin-top: 0%;
+       height: 400px;
+    }
+    .logo img{
+        margin-left: 90px;
+    }
+    .navbar-toggle{
+        margin-left: 150px; 
+    }
+    .navbar-collapse{
+        margin-left: 25%;
+        width: 200px;
+    }
+}
