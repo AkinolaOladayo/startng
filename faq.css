@@ -103,34 +103,6 @@ body{
 
 
 /* MOBILE RESPONSIVENESS */
-/* Extra small devices (portrait phones, less than 576px) */
-/* No media query for `xs` since this is the default in Bootstrap */
-
-/* Small devices (landscape phones, 576px and up) */
-@media only screen and (max-width: 576px) { 
-    
-    body{
-        width: 100%;
-    }
-    .logo img{
-        margin-left: 100px;
-    }
-    .navbar-toggle{
-        margin-left: 160px;
-    }
-    .navbar-collapse{
-        margin-left: 25px;
-    }
-    .col-3{
-        margin-top:0px;
-    }
-    .col-md-9{
-        height: 100vh;
-        width: 100%;
-    }
-   
-    
-}
 
 /* Medium devices (tablets, 768px and up) */
 @media only screen and (max-width: 768px) { 
