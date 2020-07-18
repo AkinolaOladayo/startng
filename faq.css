@@ -15,12 +15,16 @@ body{
     border-radius: 0px 0px 30px 30px;
 }
 
-
 /* Toggle button and icon-bar image */
 
 .logo img{
     margin-left: 150px;
     margin-top: -50px;
+    transition-property: transform;
+    transition-duration: 1s;
+}
+.logo img:hover{
+    transform: rotateY(180deg);
 }
 .navbar-toggle{
     border: none;
@@ -31,14 +35,14 @@ body{
     border: none;
 }
 
+
 .navbar-collapse{
     background-color: #24116A;
     border-radius: 0px 0px 30px 30px;
-    padding: 20px 20px 20px 20px;
-    width: 300px;
+    padding: 10px 20px ;
+    width: 200px;
     height: 300px;
-    margin-left: 70px;
-    
+    margin-left: 110px;
 }
 
 
@@ -71,35 +75,66 @@ body{
 }
 .col-md-9{
     background: rgba(255, 255, 255, 0.9);
-    margin-top: 150px;
+    margin-top: 200px;
+    margin-left: -50px;
     height: fit-content;
     color: #555555;
     border-radius: 5px 0px 0px 0px;
     z-index: -1;
+    animation: first;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
 }
 
-/* response in text area */
+@keyframes first{
+    0%{
+        top: -50px
+    }
+    100%{
+        top: 5px
+    }
+}
+
+
+/* Content in text area */
 
 .question{
     font-weight: bold;
     color: #2F2E41;
-    ;
+    
 }
 
+.reply{ 
+    animation: reply;
+    animation-duration: 3s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes reply{
+    0%{
+        opacity: 0;;
+    }
+    100%{
+        opacity: 1;
+    }
+}
 
 /* bottom image */
 
-.col-2 img{
+.col-6 img{
     position: absolute;
-    left: -100px;
-    top: -100px;
-    z-index: -1;
+    left: 80px;
+    top: -900px;
+    z-index: -1000;
 }
 
 /* footer */
 .footer{
-    margin-top: 150px;
+    margin-top: 130px;
 }
+
+/*-------------------------------- END OF CODE ------------------------------------------*/
 
 
 /* MOBILE RESPONSIVENESS */
@@ -116,24 +151,17 @@ body{
         margin-left: 160px;
     }
     .navbar-collapse{
-        margin-left: 30px;
+        margin-left: 70px;
     }
     .col-3{
         margin-top:0px;
     }
-
-    .bottom img{
-        /* visibility: hidden; */
-        position: absolute;
-        left: -105px;
-        width: 180px;
-    }
     .col-md-9{
         height: fit-content;
         width: 100%;
-       
+        margin-left: 0px;   
     }
-
+    
  }
 
 /* Large devices (desktops, 992px and up) */
@@ -145,16 +173,15 @@ body{
         height: fit-content;
         width: 100%;
     }
-    .col-2 img{
+    .col-6 img{
         position: absolute;
-        left: -100px;
-        top: -100px;
+        left: -200px;
         z-index: -1000;
     }
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
-@media (max-width: 1200px) { 
+@media (max-width: 1250px) { 
     .col-md-9{
         margin-top: 300px; 
         }

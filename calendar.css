@@ -20,6 +20,11 @@ body{
 .logo img{
     margin-left: 150px;
     margin-top: -50px;
+    transition-property: transform;
+    transition-duration: 1s;
+}
+.logo img:hover{
+    transform: rotateY(180deg);
 }
 .navbar-toggle{
     border: none;
@@ -34,23 +39,29 @@ body{
 .navbar-collapse{
     background-color: #24116A;
     border-radius: 0px 0px 30px 30px;
-    padding: 20px 20px 20px 20px;
-    width: 300px;
+    padding: 10px 20px ;
+    width: 200px;
     height: 300px;
-    margin-left: 70px;
+    margin-left: 110px;
 }
+
+
 
 
 /* navigation links */
 
+
+
 .nav-links a{
     color: white;
+
 }
 .nav-links a:hover{
     list-style: none;
     text-decoration: none;
     color: white;
     font-weight: bold;
+    
 }
 .active{
     color: white;
@@ -61,32 +72,64 @@ body{
     text-align: center;
 }
 
-/* Grid system for textarea */
 
+/* Grid system for textarea */
 .col-3{
     margin-top: 280px;
 }
+
 .col-md-9{
     background: rgba(255, 255, 255, 0.9);
     margin-top: 150px;
-    height: 90vh;
+    margin-left: -50px;
+    height: fit-content;
     color: #555555;
     border-radius: 5px 0px 0px 0px;
     z-index: -1;
+    animation: first;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
 }
 
-/* response in text area */
+@keyframes first{
+    0%{
+        top: -50px
+    }
+    100%{
+        top: 10px
+    }
+}
+
+
+/* Content in text area */
+
 .reply{
     color: #555555;
     font-weight: bold;  
+    opacity: 0;
+    animation: reply;
+    animation-duration: 3s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
 }
+
+@keyframes reply{
+    0%{
+        opacity: 0;;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+
 
 /* bottom image */
 
 .bottom img{
     position: absolute;
-    left: 0px;
-    top: -100px;
+    left: -100px;
+    top: -720px;
     z-index: -1000;
 }
 
@@ -98,36 +141,8 @@ body{
 
 
 /* MOBILE RESPONSIVENESS */
-/* Extra small devices (portrait phones, less than 576px) */
 
-
-/* Small devices (landscape phones, 576px and up) */
-@media only screen and (max-width: 576px) { 
-    
-    body{
-        width: 100%;
-    }
-    .logo img{
-        margin-left: 100px;
-    }
-    .navbar-toggle{
-        margin-left: 160px;
-    }
-    .navbar-collapse{
-        margin-left: 25px;
-    }
-    .col-3{
-        margin-top:0px;
-    }
-    .col-md-9{
-        height: 100vh;
-        width: 100%;
-    }
-   
-    
-}
-
-/* Medium devices (tablets, 768px and up) */
+/* Medium devices (tablets, 768px and down) */
 @media only screen and (max-width: 768px) { 
     body{
         width: 100%;
@@ -139,23 +154,26 @@ body{
         margin-left: 160px;
     }
     .navbar-collapse{
-        margin-left: 30px;
+        margin-left: 70px;
     }
     .col-3{
         margin-top:0px;
     }
-
-    .bottom img{
-        /* visibility: hidden; */
-        position: absolute;
-        left: -105px;
-        width: 180px;
-    }
     .col-md-9{
         height: fit-content;
         width: 100%;
-       
+        margin-left: 0px;
+        
     }
+    .bottom img{
+        /* visibility: hidden; */
+        position: absolute;
+        height: 200px;
+        left: -105px;
+        width: 180px;
+        top: -90px;
+    }
+   
 
  }
 
@@ -178,7 +196,7 @@ body{
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
-@media (max-width: 1200px) { 
+@media (max-width: 1270px) { 
     .col-md-9{
         margin-top: 300px; 
         }

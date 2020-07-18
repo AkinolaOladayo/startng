@@ -8,7 +8,7 @@ body{
     background: #E4EDF2;
     width: 100%;
     height: 100%;
-    /* overflow-y: auto; */
+    
 }
 
 .navbar{
@@ -26,29 +26,29 @@ body{
 .logo img{
     margin-left: 150px;
     margin-top: -50px;
+    transition-property: transform;
+    transition-duration: 1s;
+}
+.logo img:hover{
+    transform: rotateY(90deg);
 }
 .navbar-toggle{
     border: none;
     margin-left: 210px;
-
 }
-
 
 .img-menu{
     background-color:#24116A;
     margin-top: -10px;
 }
 
-
-
 .navbar-collapse{
     background-color: #24116A;
     border-radius: 0px 0px 30px 30px;
-    padding: 20px 20px 20px 20px;
-    width: 300px;
+    padding: 10px 20px ;
+    width: 200px;
     height: 300px;
-    margin-left: 80px;
-    
+    margin-left: 130px;
 }
 
 
@@ -73,15 +73,15 @@ body{
 
 /* SVG image */
 .content img{
-    margin-top: 0%;
+    cursor: pointer;
+    margin-left: 20px;
+    margin-top: 5%;
     margin-left: -5%;
-    animation-duration: 3s;
     animation-name: slidein;
-    
+    animation-duration: 3s;
 }
 
 /* ANIMATIONS */
-
   @keyframes slidein {
     from {
       margin-left: 100%;
@@ -96,18 +96,13 @@ body{
     to {
       margin-left: 0%;
       width: 50%;
-    }
+    } 
+
   }
 
 
-/* MOBILE RESPONSIVENESS */
 
-/* Large devices (landscape tablets, 1024px and up) */
-@media only screen and (max-width: 1024px) {
-    .brand{
-        left: 25%;
-    }
-}
+/* MOBILE RESPONSIVENESS */
 
 /* Small devices (landscape tablets, 768px and below) */
 @media only screen and (max-width: 768px) {
@@ -126,7 +121,11 @@ body{
         margin-left: 150px; 
     }
     .navbar-collapse{
-        margin-left: 25%;
+        margin-left: 60px;
         width: 200px;
+        height: 250px;
+    }
+    .nav-links{
+        margin-top: 10px;
     }
 }
